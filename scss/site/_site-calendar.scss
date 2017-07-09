@@ -1,0 +1,283 @@
+$border: solid $site-black;
+$max-breakpoint: 889px;
+$min-breakpoint: 890px;
+$weekdays: (
+        1: 'Sun -',
+        2: 'Mon -',
+        3: 'Tues -',
+        4: 'Wed -',
+        5: 'Thu -',
+        6: 'Fri -',
+        7: 'Sat -'
+);
+
+.calendar-header, .calendar-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.calendar-header {
+    @media only screen and (max-width: 1199px) {
+        margin-left: 10px;
+    }
+}
+
+.calendar-wrapper {
+    position: relative;
+    z-index: 10;
+    h2 {
+        font-family: 'Droid Serif', serif;
+        font-size: 50px;
+        margin: 50px 0;
+        color: $site-green;
+        text-align: center;
+    }
+}
+
+.legend, .calendar, .cal-row, .col, .calendar-event {
+    display: flex;
+}
+
+.calendar {
+    flex-direction: column;
+}
+
+.cal-row {
+    flex-wrap: wrap;
+    align-items: stretch;
+    border: $border;
+
+    @media only screen and (min-width: 0) {
+        border-width: 1px 0 0 0;
+    }
+    @media only screen and (min-width: $min-breakpoint) {
+        border-width: 1px 1px 0 1px;
+    }
+    &:last-child {
+        border-bottom-width: 1px;
+    }
+    .col {
+        border-right: 1px $border;
+        cursor: pointer;
+        @media only screen and (max-width: $max-breakpoint) {
+            flex-basis: 100%;
+            border-right: 0;
+            border-bottom: 1px $border;
+        }
+        @media only screen and (min-width: $min-breakpoint) {
+            flex-basis: 14.285714%;
+        }
+        &.col-6 {
+            @media only screen and (max-width: $max-breakpoint) {
+                border-right: none;
+            }
+        }
+        &.col-7 {
+            border-right: 0;
+        }
+        &.alt-month {
+            color: #ccc;
+        }
+    }
+    &.labels {
+        @media only screen and (max-width: $max-breakpoint) {
+            display: none;
+        }
+        @media only screen and (min-width: $min-breakpoint) {
+            flex-basis: 45px;
+            .col {
+                align-items: center;
+                justify-content: center;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.week {
+        .col {
+            flex-direction: column;
+            min-height: 120px;
+            padding: 10px;
+            @media only screen and (max-width: $max-breakpoint) {
+                align-items: flex-start;
+            }
+            p {
+                position: relative;
+                padding-left: 40px;
+                text-align: right;
+                &::before {
+                    @media only screen and (min-width: 0) {
+                        position: absolute;
+                        left: 0;
+                        color: #aaa;
+                    }
+                    @media only screen and (min-width: $min-breakpoint) {
+                        display: none;
+                    }
+                }
+            }
+            @each $column, $day in $weekdays {
+                &.col-#{$column} {
+                    p::before {
+                        content: $day;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.calendar-event {
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 100%;
+    padding: 0 7px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background-color: $site-black;
+    @media only screen and (max-width: $max-breakpoint) {
+        width: 100%;
+        min-height: 30px;
+        align-items: center;
+    }
+    span {
+        display: inline-block;
+        color: white;
+        line-height: 22px;
+        &.event {
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media only screen and (min-width: 890px) and (max-width: $screen-md-max) {
+                font-size: 9px;
+            }
+        }
+        &.time {
+            text-align: right;
+            font-size: 11px;
+            @media only screen and (min-width: 890px) and (max-width: $screen-md-max) {
+                font-size: 9px;
+            }
+        }
+    }
+}
+
+/*.modal-dialog {
+    margin-top: 15vh;
+    label {
+        display: block;
+        font-weight: normal;
+    }
+    input {
+        line-height: 27px;
+    }
+    .time {
+        display: inline-block;
+    }
+    .intro, .type, .date-from, .date-to {
+        margin-bottom: 20px;
+    }
+    .intro {
+        input {
+            &:first-of-type {
+                width: 100%;
+            }
+        }
+    }
+    .type {
+        a {
+            display: inline-block;
+            line-height: 21px;
+            &:hover {
+                opacity: 0.8;
+            }
+            &:before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                margin-right: 5px;
+                background-color: $site-wheat;
+            }
+        }
+    }
+    .date-from, .date-to {
+        display: inline-block;
+        width: 49%;
+        & > input {
+            width: 53%;
+        }
+        .time {
+            width: 41%;
+            margin-left: 1%;
+            input {
+                max-width: 100%;
+            }
+        }
+    }
+    input, textarea {
+        padding-left: 10px;
+    }
+    textarea {
+        width: 100%;
+        border-color: #ccc;
+        resize: none;
+    }
+    .btn-primary {
+        //background-color: $site-green-transparent;
+        //border-color: $site-green-transparent;
+    }
+}*/
+
+.upcoming-events {
+    .event-item {
+        overflow: hidden;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+    h3 {
+        font-family: 'Droid Serif', serif;
+        color: $site-green;
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    span {
+        display: block;
+    }
+    .date {
+        float: left;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-right: 50px;
+        span {
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+    .title {
+        float: left;
+        padding-top: 5px;
+    }
+}
+
+.view-more {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto;
+    background-color: white;
+    color: $site-wheat;
+    border-color: $site-wheat;
+    &:hover {
+        background-color: $site-wheat;
+        color: white;
+    }
+}

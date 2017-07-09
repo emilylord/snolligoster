@@ -1,0 +1,33 @@
+.contact-wrapper {
+    padding: 50px 50px 150px 50px;
+    h3 {
+        margin-top: 14px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: $site-green;
+        font-weight: 400;
+    }
+    p {
+        font-size: 28px;
+        line-height: 50px;
+        margin: 0;
+    }
+}
+.at-follow-tbx-element {
+    p {
+        span {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            color: $site-green;
+        }
+    }
+    .at-icon-wrapper, .at-icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .at300b {
+        margin-left: 0 !important;
+        margin-right: 8px !important;
+    }
+}

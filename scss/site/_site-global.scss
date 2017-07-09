@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $site-black;
+}
+
+.page-wrapper {
+    min-height: 500px;
+    &.calendar {
+        position: relative;
+        background: url(../img/hero_grains.jpg) center no-repeat;
+        background-size: cover;
+        padding-top: 30px;
+        padding-bottom: 60px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        & + footer {
+            margin-top: 0;
+        }
+    }
+    &.members {
+        .hero {
+            margin-bottom: 50px;
+            background-size: 100% 612px;
+        }
+    }
+}
+
+a {
+    &:hover {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+}
+
+p {
+    font-size: 16px;
+}

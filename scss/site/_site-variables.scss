@@ -1,0 +1,14 @@
+//brand colors
+$site-black: #333;
+$site-wheat: #e5c487;
+$site-green: #92b44b;
+$site-white: #fff;
+
+$grid-float-breakpoint: 992px;
+
+@mixin animation-transition() {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

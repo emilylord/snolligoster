@@ -1,0 +1,22 @@
+.hero {
+    width: 100%;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 160px;
+    h1 {
+        &:not(.hidden) {
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 45px;
+            text-align: center;
+            background: rgba(255,255,255,0.75);
+            font-weight: 100;
+        }
+        .hidden {
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+}

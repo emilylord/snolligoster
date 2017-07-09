@@ -1,0 +1,54 @@
+.beer-spotlight-teaser {
+    h3 {
+        font-family: 'Droid Serif', serif;
+        color: $site-green;
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .internal-spotlight, .external-spotlight {
+        overflow: hidden;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        //border-bottom: 1px solid #ccc;
+    }
+    .external-spotlight {
+        img {
+            border: 1px solid #dedede;
+        }
+    }
+    img {
+        float: left;
+        width: 89px;
+        margin-right: 50px;
+    }
+    .description {
+        float: left;
+        width: calc(100% - 139px);
+        h4 {
+            margin-top: 0;
+            font-size: 15px;
+        }
+    }
+}
+
+.beer-spotlight {
+    .col-md-6 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    h2 {
+        color: $site-green;
+        font-size: 40px;
+        font-weight: 100;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-top: 0;
+    }
+    .left {
+        border-right: 1px solid $site-wheat;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+}

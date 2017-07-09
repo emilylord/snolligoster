@@ -1,0 +1,75 @@
+header {
+    height: auto;
+    padding: 8px 0;
+    background-color: $site-black;
+    .navbar-header {
+        .navbar-brand {
+            height: auto;
+            padding: 0;
+            margin-right: 20px;
+            img {
+                max-width: 80px;
+                height: auto;
+            }
+        }
+    }
+    .navbar-toggle {
+        margin-top: 13px;
+        .icon-bar {
+            width: 28px;
+            height: 3px;
+            background-color: $site-wheat;
+            & + .icon-bar {
+                margin-top: 6px;
+            }
+        }
+    }
+    .navbar-collapse {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        .navbar-nav {
+            @media only screen and (min-width: $screen-md-min) {
+                float: right;
+            }
+            & > li {
+                a {
+                    color: $site-wheat;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                    line-height: 69px;
+                    @include animation-transition;
+                    @media only screen and (max-width: $screen-xs-max) {
+                        padding-left: 10px;
+                    }
+                    @media only screen and (min-width: $screen-md-min) {
+                        padding: 0 24px;
+                    }
+                    @media only screen and (min-width: $screen-lg) {
+                        padding: 0 40px;
+                    }
+                    &:hover {
+                        color: white;
+                    }
+                    &:hover, &:focus {
+                        background-color: transparent;
+                    }
+                }
+                &.open {
+                    a {
+                        background-color: transparent;
+                    }
+                }
+                .dropdown-menu {
+                    top: calc(100% + 7px);
+                    background-color: $site-black;
+                    li {
+                        a {
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
