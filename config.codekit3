@@ -27,10 +27,10 @@
 		"oAP": "\/.idea\/modules.xml",
 		"oF": 0
 		},
-	"\/.idea\/Snolligoster.iml": {
+	"\/.idea\/snolligoster.iml": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.idea\/Snolligoster.iml",
+		"oAP": "\/.idea\/snolligoster.iml",
 		"oF": 0
 		},
 	"\/.idea\/vcs.xml": {
@@ -137,6 +137,16 @@
 		"iS": 81155,
 		"oA": 0,
 		"oAP": "\/img\/blogs\/emily-emerson.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/blogs\/emily.jpg": {
+		"ft": 16384,
+		"iS": 36297,
+		"oA": 0,
+		"oAP": "\/img\/blogs\/emily.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1530,7 +1540,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 506701941,
-	"displayValue": "Snolligoster",
+	"displayValue": "snolligoster",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry"
 	},
