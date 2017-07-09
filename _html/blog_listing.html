@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog - Snolligoster Homebrew Club</title>
+  <title>Blogs - Snolligoster Homebrew Club</title>
 
-  <!--<link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet' type='text/css'>
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <link href="../css/main.css" rel="stylesheet">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -50,13 +50,21 @@
   </div>
 </header>
 <div class="page-wrapper blog-listing">
-  <div class="hero" style="background-image:url(../img/hero_beers.jpg); background-position: center 85%;">
+  <div class="hero" style="background-image:url(../img/hero_beers.jpg); background-position: center 85%; margin-bottom: 60px;">
     <h1>Blog Listing</h1>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-
+        <div class="blog-list-wrapper">
+          <a href="blogs/brew-club-wife-perspective.html" class="blog-card">
+            <div class="wrapper">
+              <img src="../img/blogs/emily-emerson.jpg">
+              <h3>The Brew Club - A Wife's Perspective</h3>
+              <p><strong>Emily Lord &nbsp;|&nbsp; July 9, 2017</strong></p>
+              <p>Joshua's wife Emily writes a post from the perspective of a club member's wife and someone who doesn't enjoy beer.</p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -81,5 +89,9 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../js/jquery.matchHeight.js"></script>
+<script>
+  $('.blog-card').matchHeight(true);
+</script>
 </body>
 </html>

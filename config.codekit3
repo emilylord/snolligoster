@@ -105,6 +105,12 @@
 		"oAP": "\/_html\/members.html",
 		"oF": 0
 		},
+	"\/_html\/Offical By-Laws_ 1-31-17.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/_html\/Offical By-Laws_ 1-31-17.pdf",
+		"oF": 0
+		},
 	"\/css\/main.css": {
 		"aP": 0,
 		"bl": 0,
@@ -126,6 +132,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/blogs\/emily-emerson.jpg": {
+		"ft": 16384,
+		"iS": 81155,
+		"oA": 0,
+		"oAP": "\/img\/blogs\/emily-emerson.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/color_palette.png": {
 		"ft": 32768,
 		"iS": 27058,
@@ -134,6 +150,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/download.png": {
+		"ft": 32768,
+		"iS": 1139,
+		"oA": 0,
+		"oAP": "\/img\/download.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
